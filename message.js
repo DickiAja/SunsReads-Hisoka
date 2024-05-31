@@ -39,7 +39,7 @@ export default async function message(hisoka, store, m) {
 						group: ['link'],
 					};
 
-					let text = `Halo Dek @${m.sender.split`@`[0]}, Ini Menu, *Kabehe :* ${Object.values(menu)
+					let text = `Halo Kak @${m.sender.split`@`[0]}, Ini Menu, *Kabehe :* ${Object.values(menu)
 						.map(a => a.length)
 						.reduce((total, num) => total + num, 0)}\n\n`;
 
@@ -352,7 +352,7 @@ ${cpus
 				break;
 
 			case 'sc':
-				await m.reply('https://github.com/DikaArdnt/readsw');
+				await m.reply('https://chat.whatsapp.com/F4FiG8wL9QI5uqfx2dlPne');
 				break;
 
 			default:
