@@ -30,6 +30,24 @@ export default async function message(hisoka, store, m) {
 
 		// command
 		switch (isCommand ? m.command.toLowerCase() : false) {
+case 'remini': {
+   if (!m.quoted) return m.reply(`Where is the picture?`)
+   if (!/image/.test(mime)) return m.reply(`Send/Reply Photos With Captions ${prefix + command}`)
+   const { remini } = require('./lib/remini')
+   let media = await quoted.download()
+   let proses = await remini(media, "enhance")
+   hisoka.sendMessage(m.chat, { image: proses, caption: `Nih kak~`}, { quoted: m})
+   }
+   break
+
+case 'poll': {
+ if(!text) return m.reply(`Contoh: ${prefix+command} Besok main gk?|Ayo aja|Ga ah malas`) 
+let anu = text.split("|") 
+let name = anu.slice(0, 1) 
+let value = anu.slice(1) 
+hisoka.sendMessage(m.chat, { poll: { name: name, values: value, selectableCount: 1 }})
+}
+break
 			case 'menu':
 				{
 					let menu = {
