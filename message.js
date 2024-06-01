@@ -52,7 +52,7 @@ break
 				{
 					let menu = {
 						main: ['menu', 'info', 'delete', 'quoted', 'listsw', 'getsw', 'sc'],
-						tool: ['rvo', 'exif', 'tourl', 'sticker'],
+						tool: ['rvo', 'exif', 'tourl', 'sticker', 'remini', 'poll'],
 						owner: ['upsw', 'restart', 'eval', 'exec'],
 						group: ['link'],
 					};
