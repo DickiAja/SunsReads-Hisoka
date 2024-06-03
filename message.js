@@ -31,6 +31,10 @@ export default async function message(hisoka, store, m) {
 		// command
 		switch (isCommand ? m.command.toLowerCase() : false) {
 case 'remini': {
+	const fatkuns = (m.quoted || m)
+        const quoted = (fatkuns.mtype == 'buttonsMessage') ? fatkuns[Object.keys(fatkuns)[1]] : (fatkuns.mtype == 'templateMessage') ? fatkuns.hydratedTemplate[Object.keys(fatkuns.hydratedTemplate)[1]] : (fatkuns.mtype == 'product') ? fatkuns[Object.keys(fatkuns)[0]] : m.quoted ? m.quoted : m
+        const mime = (quoted.msg || quoted).mimetype || ''
+        const qmsg = (quoted.msg || quoted)
    if (!m.quoted) return m.reply(`Where is the picture?`)
    if (!/image/.test(mime)) return m.reply(`Send/Reply Photos With Captions ${prefix + command}`)
    const { remini } = require('./lib/remini')
